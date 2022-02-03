@@ -586,6 +586,23 @@ class PlayState extends MusicBeatState
 				add(waveSpriteFG);
 			 */
 		}
+		else if (SONG.song.toLowerCase() == 'solar-flares')
+		{
+			curStage = 'sky';
+			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('week7/SkyBg'));
+			bg.antialiasing = true;
+			bg.scrollFactor.set(0.9, 0.9);
+			bg.active = false;
+			add(bg);
+
+			var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('week7/SkyGrass'));
+			stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+			stageFront.updateHitbox();
+			stageFront.antialiasing = true;
+			stageFront.scrollFactor.set(0.9, 0.9);
+			stageFront.active = false;
+			add(stageFront);
+		}
 		else
 		{
 			defaultCamZoom = 0.9;
