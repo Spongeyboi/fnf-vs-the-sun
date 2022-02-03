@@ -586,7 +586,7 @@ class PlayState extends MusicBeatState
 				add(waveSpriteFG);
 			 */
 		}
-		else if (SONG.song.toLowerCase() == 'solar-flares')
+		else if (SONG.song.toLowerCase() == 'solar-flares' || SONG.song.toLowerCase() == 'golden-sun' || SONG.song.toLowerCase() == 'shine')
 		{
 			curStage = 'sky';
 			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('SkyBg'));
